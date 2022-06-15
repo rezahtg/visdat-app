@@ -250,4 +250,3 @@ fig_dpc.add_tools(HoverTool(tooltips=tooltips, formatters={'@Date': 'datetime'})
 # tampilkan show
 # show(tabs)
 curdoc().add_root(column(tabs))
-
