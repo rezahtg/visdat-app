@@ -19,7 +19,7 @@ import io
 
 # Bokeh libraries
 from bokeh.io import output_file, output_notebook
-from bokeh.plotting import figure, show
+from bokeh.plotting import figure, show, curdoc
 from bokeh.models import ColumnDataSource
 from bokeh.layouts import row, column, gridplot
 from bokeh.models.widgets import Tabs, Panel
@@ -248,5 +248,6 @@ fig_vol.add_tools(HoverTool(tooltips=tooltips, formatters={'@Date': 'datetime'})
 fig_dpc.add_tools(HoverTool(tooltips=tooltips, formatters={'@Date': 'datetime'}))
 
 # tampilkan show
-show(tabs)
+# show(tabs)
+curdoc().add_root(column(tabs))
 
